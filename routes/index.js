@@ -52,3 +52,7 @@ exports.deployment = function(req, res){
 	})
 };
 
+exports.ui = function(req, res){
+ res.render('ui', { title: 'ui' })
+};
+

@@ -37,7 +37,6 @@ body {
 	font-size: 13px;
 }
 
-
 .coming-soon-content input {
 	background: #fff !important;
 }
@@ -76,7 +75,8 @@ body {
 	padding: 7px 15px !important;
 	margin-bottom: 2px;
 	font-weight: 300;
-	background: url(../../img/bg-white.png) repeat;
+	/*background: url(../../img/bg-white.png) repeat;*/
+	background: grey;
 	text-align: center;
 }
 

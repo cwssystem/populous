@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8" />
-	<title>Metronic | Portlets - Draggable Portlets</title>
+	<title>Reaction Populous - Galveston Zeta Deployment</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -18,6 +18,16 @@
 	<link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 	<link href="assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 	<link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<!-- BEGIN LEAFLET.CSS --> 
+	<link href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="stylesheets/MarkerCluster.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="stylesheets/MarkerCluster.Default.css" rel="stylesheet" type="text/css" media="screen"/>
+	<!-- END LEAFLET.CSS -->
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+	<link href="assets/css/pages/coming-soon.css" rel="stylesheet" type="text/css"/>
+	<!-- END PAGE LEVEL STYLES -->	
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<link rel="shortcut icon" href="favicon.ico" />
 </head>
@@ -31,7 +41,7 @@
 			<div class="container-fluid">
 				<!-- BEGIN LOGO -->
 				<a class="brand" href="/">
-				<img src="assets/img/logo.png" alt="logo" />
+				<img src="assets/img/logo.png" alt="logo"/>
 				</a>
 				<!-- END LOGO -->
 				<!-- BEGIN RESPONSIVE MENU TOGGLER -->
@@ -139,7 +149,7 @@
 								<a href="inbox.html?a=view">
 								<span class="photo"><img src="./assets/img/avatar1.jpg" alt="" /></span>
 								<span class="subject">
-								<span class="from">Bob Nilson</span>
+								<span class="from">Queer T. Bait</span>
 								<span class="time">2 hrs</span>
 								</span>
 								<span class="message">
@@ -239,8 +249,8 @@
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown user">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<img alt="" src="assets/img/avatar1_small.jpg" />
-						<span class="username">Bob Nilson</span>
+						<img alt="" src="/images/avatar_small_MM.png" />
+						<span class="username">Queer T. Bait</span>
 						<i class="icon-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu">
@@ -283,436 +293,69 @@
 					</form>
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
-				<li class="start ">
+				<li class="start">
 					<a href="/">
 					<i class="icon-home"></i> 
 					<span class="title">Dashboard</span>
+					<span class="selected"></span>
 					</a>
 				</li>
 				<li class="">
 					<a href="javascript:;">
 					<i class="icon-cogs"></i> 
-					<span class="title">Layouts</span>
+					<span class="title">Storage Facilities</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
-						<li >
-							<a href="layout_horizontal_sidebar_menu.html">
-							Horzontal & Sidebar Menu</a>
-						</li>
-						<li >
-							<a href="layout_horizontal_menu1.html">
-							Horzontal Menu 1</a>
-						</li>
-						<li >
-							<a href="layout_horizontal_menu2.html">
-							Horzontal Menu 2</a>
-						</li>
-						<li >
-							<a href="layout_promo.html">
-							Promo Page</a>
-						</li>
-						<li >
-							<a href="layout_email.html">
-							Email Templates</a>
-						</li>
-						<li >
-							<a href="layout_ajax.html">
-							Content Loading via Ajax</a>
-						</li>
-						<li >
-							<a href="layout_sidebar_closed.html">
-							Sidebar Closed Page</a>
-						</li>
-						<li >
-							<a href="layout_blank_page.html">
-							Blank Page</a>
-						</li>
-						<li >
-							<a href="layout_boxed_page.html">
-							Boxed Page</a>
-						</li>
-						<li >
-							<a href="layout_boxed_not_responsive.html">
-							Non-Responsive Boxed Layout</a>
-						</li>
 					</ul>
 				</li>
 				<li class="">
 					<a href="javascript:;">
 					<i class="icon-bookmark-empty"></i> 
-					<span class="title">UI Features</span>
+					<span class="title">In Transit</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
-						<li >
-							<a href="ui_general.html">
-							General</a>
-						</li>
-						<li >
-							<a href="ui_buttons.html">
-							Buttons</a>
-						</li>
-						<li >
-							<a href="ui_modals.html">
-							Enhanced Modals</a>
-						</li>
-						<li >
-							<a href="ui_tabs_accordions.html">
-							Tabs & Accordions</a>
-						</li>
-						<li >
-							<a href="ui_jqueryui.html">
-							jQuery UI Components</a>
-						</li>
-						<li >
-							<a href="ui_sliders.html">
-							Sliders</a>
-						</li>
-						<li >
-							<a href="ui_tiles.html">
-							Tiles</a>
-						</li>
-						<li >
-							<a href="ui_typography.html">
-							Typography</a>
-						</li>
-						<li >
-							<a href="ui_tree.html">
-							Tree View</a>
-						</li>
-						<li >
-							<a href="ui_nestable.html">
-							Nestable List</a>
-						</li>
 					</ul>
 				</li>
-				<li class="">
+				<li class="active">
 					<a href="javascript:;">
 					<i class="icon-table"></i> 
-					<span class="title">Form Stuff</span>
+					<span class="title">Deployments</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li >
-							<a href="form_layout.html">
-							Form Layouts</a>
+							<a href="/deployment">
+							Galveston Sigma</a>
 						</li>
 						<li >
-							<a href="form_samples.html">
-							Advance Form Samples</a>
+							<a href="/deployment">
+							Galveston Theta</a>
+						</li>
+						<li class="active">
+							<a href="/deployment">
+							Galveston Zeta</a>
 						</li>
 						<li >
-							<a href="form_component.html">
-							Form Components</a>
+							<a href="/deployment">
+							Hoboken Alpha</a>
 						</li>
 						<li >
-							<a href="form_wizard.html">
-							Form Wizard</a>
-						</li>
-						<li >
-							<a href="form_validation.html">
-							Form Validation</a>
-						</li>
-						<li >
-							<a href="form_fileupload.html">
-							Multiple File Upload</a>
-						</li>
-						<li >
-							<a href="form_dropzone.html">
-							Dropzone File Upload</a>
+							<a href="/deployment">
+							Hoboken Beta</a>
 						</li>
 					</ul>
 				</li>
 				<li class="">
 					<a href="javascript:;">
 					<i class="icon-briefcase"></i> 
-					<span class="title">Pages</span>
+					<span class="title">Guest Management</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
-						<li >
-							<a href="page_timeline.html">
-							<i class="icon-time"></i>
-							Timeline</a>
-						</li>
-						<li >
-							<a href="page_coming_soon.html">
-							<i class="icon-cogs"></i>
-							Coming Soon</a>
-						</li>
-						<li >
-							<a href="page_blog.html">
-							<i class="icon-comments"></i>
-							Blog</a>
-						</li>
-						<li >
-							<a href="page_blog_item.html">
-							<i class="icon-font"></i>
-							Blog Post</a>
-						</li>
-						<li >
-							<a href="page_news.html">
-							<i class="icon-coffee"></i>
-							News</a>
-						</li>
-						<li >
-							<a href="page_news_item.html">
-							<i class="icon-bell"></i>
-							News View</a>
-						</li>
-						<li >
-							<a href="page_about.html">
-							<i class="icon-group"></i>
-							About Us</a>
-						</li>
-						<li >
-							<a href="page_contact.html">
-							<i class="icon-envelope-alt"></i>
-							Contact Us</a>
-						</li>
-						<li >
-							<a href="page_calendar.html">
-							<i class="icon-calendar"></i>
-							Calendar</a>
-						</li>
 					</ul>
-				</li>
-				<li class="">
-					<a href="javascript:;">
-					<i class="icon-gift"></i> 
-					<span class="title">Extra</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li >
-							<a href="extra_profile.html">
-							User Profile</a>
-						</li>
-						<li >
-							<a href="extra_lock.html">
-							Lock Screen</a>
-						</li>
-						<li >
-							<a href="extra_faq.html">
-							FAQ</a>
-						</li>
-						<li >
-							<a href="inbox.html">
-							Inbox</a>
-						</li>
-						<li >
-							<a href="extra_search.html">
-							Search Results</a>
-						</li>
-						<li >
-							<a href="extra_invoice.html">
-							Invoice</a>
-						</li>
-						<li >
-							<a href="extra_pricing_table.html">
-							Pricing Tables</a>
-						</li>
-						<li >
-							<a href="extra_image_manager.html">
-							Image Manager</a>
-						</li>
-						<li >
-							<a href="extra_404_option1.html">
-							404 Page Option 1</a>
-						</li>
-						<li >
-							<a href="extra_404_option2.html">
-							404 Page Option 2</a>
-						</li>
-						<li >
-							<a href="extra_404_option3.html">
-							404 Page Option 3</a>
-						</li>
-						<li >
-							<a href="extra_500_option1.html">
-							500 Page Option 1</a>
-						</li>
-						<li >
-							<a href="extra_500_option2.html">
-							500 Page Option 2</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a class="active" href="javascript:;">
-					<i class="icon-sitemap"></i> 
-					<span class="title">3 Level Menu</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="javascript:;">
-							Item 1
-							<span class="arrow"></span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Sample Link 1</a></li>
-								<li><a href="#">Sample Link 2</a></li>
-								<li><a href="#">Sample Link 3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:;">
-							Item 1
-							<span class="arrow"></span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Sample Link 1</a></li>
-								<li><a href="#">Sample Link 1</a></li>
-								<li><a href="#">Sample Link 1</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-							Item 3
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-folder-open"></i> 
-					<span class="title">4 Level Menu</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="javascript:;">
-							<i class="icon-cogs"></i> 
-							Item 1
-							<span class="arrow"></span>
-							</a>
-							<ul class="sub-menu">
-								<li>
-									<a href="javascript:;">
-									<i class="icon-user"></i>
-									Sample Link 1
-									<span class="arrow"></span>
-									</a>
-									<ul class="sub-menu">
-										<li><a href="#"><i class="icon-remove"></i> Sample Link 1</a></li>
-										<li><a href="#"><i class="icon-pencil"></i> Sample Link 1</a></li>
-										<li><a href="#"><i class="icon-edit"></i> Sample Link 1</a></li>
-									</ul>
-								</li>
-								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
-								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 2</a></li>
-								<li><a href="#"><i class="icon-bell"></i>  Sample Link 3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:;">
-							<i class="icon-globe"></i> 
-							Item 2
-							<span class="arrow"></span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
-								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 1</a></li>
-								<li><a href="#"><i class="icon-bell"></i>  Sample Link 1</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-folder-open"></i>
-							Item 3
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="">
-					<a href="javascript:;">
-					<i class="icon-user"></i> 
-					<span class="title">Login Options</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li >
-							<a href="login.html">
-							Login Form 1</a>
-						</li>
-						<li >
-							<a href="login_soft.html">
-							Login Form 2</a>
-						</li>
-					</ul>
-				</li>
-				<li class="">
-					<a href="javascript:;">
-					<i class="icon-th"></i> 
-					<span class="title">Data Tables</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li >
-							<a href="table_basic.html">
-							Basic Tables</a>
-						</li>
-						<li >
-							<a href="table_responsive.html">
-							Responsive Tables</a>
-						</li>
-						<li >
-							<a href="table_managed.html">
-							Managed Tables</a>
-						</li>
-						<li >
-							<a href="table_editable.html">
-							Editable Tables</a>
-						</li>
-						<li >
-							<a href="table_advanced.html">
-							Advanced Tables</a>
-						</li>
-					</ul>
-				</li>
-				<li class="active ">
-					<a href="javascript:;">
-					<i class="icon-file-text"></i> 
-					<span class="title">Portlets</span>
-					<span class="selected"></span>
-					<span class="arrow open"></span>
-					</a>
-					<ul class="sub-menu">
-						<li >
-							<a href="portlet_general.html">
-							General Portlets</a>
-						</li>
-						<li class="active">
-							<a href="portlet_draggable.html">
-							Draggable Portlets</a>
-						</li>
-					</ul>
-				</li>
-				<li class="">
-					<a href="javascript:;">
-					<i class="icon-map-marker"></i> 
-					<span class="title">Maps</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li >
-							<a href="maps_google.html">
-							Google Maps</a>
-						</li>
-						<li >
-							<a href="maps_vector.html">
-							Vector Maps</a>
-						</li>
-					</ul>
-				</li>
-				<li class="last ">
-					<a href="charts.html">
-					<i class="icon-bar-chart"></i> 
-					<span class="title">Visual Charts</span>
-					</a>
-				</li>
+				</li>	
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>
@@ -782,7 +425,7 @@
 						<!-- END BEGIN STYLE CUSTOMIZER -->    
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
 						<h3 class="page-title">
-							Draggable Portlets <small>draggable portlet samples</small>
+							Galveston Zeta <small>Deployment</small>
 						</h3>
 						<ul class="breadcrumb">
 							<li>
@@ -791,190 +434,384 @@
 								<i class="icon-angle-right"></i>
 							</li>
 							<li>
-								<a href="#">Portlets</a>
+								<a href="#">Deployments</a>
 								<i class="icon-angle-right"></i>
 							</li>
-							<li><a href="#">Draggable Portlets</a></li>
+							<li><a href="#">Galveston Zeta</a></li>
 						</ul>
 						<!-- END PAGE TITLE & BREADCRUMB-->
 					</div>
 				</div>
 				<!-- END PAGE HEADER-->
 				<!-- BEGIN PAGE CONTENT-->
-				<div class="row-fluid" id="sortable_portlets">
-					<div class="span4 column sortable">
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box grey">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="actions">
-									<a href="#" class="btn yellow mini"><i class="icon-pencil"></i> Edit</a>
-									<a href="#" class="btn green mini"><i class="icon-plus"></i> Add</a>
+
+					<div class="row-fluid">
+						<div class="span12">
+
+							<!-- BEGIN PORTLET-->
+							<div class="portlet">
+								<div class="portlet-title">
+									<div class="caption"><i class="icon-globe"></i>Deployment Site</div>
+									<div class="tools">
+										<a href="" class="collapse"></a>
+										<a href="#portlet-config" data-toggle="modal" class="config"></a>
+										<a href="" class="reload"></a>
+										<a href="" class="remove"></a>
+									</div>
 								</div>
-							</div>
-							<div class="portlet-body">
-								<div>
-									Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-									Cras mattis consectetur purus sit amet fermentum. Duis mollis.
-								</div>
-							</div>
-						</div>
-						<!-- END Portlet PORTLET-->
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box blue">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="actions">
-									<a href="#" class="btn yellow mini"><i class="icon-pencil"></i> Edit</a>
-									<a href="#" class="btn green mini"><i class="icon-plus"></i> Add</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-								Cras mattis consectetur purus sit amet fermentum. Duis mollis.
-							</div>
-						</div>
-						<!-- END Portlet PORTLET-->
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box green">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="actions">
-									<a href="#" class="btn yellow mini"><i class="icon-pencil"></i> Edit</a>
-									<a href="#" class="btn green mini"><i class="icon-plus"></i> Add</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-								Cras mattis consectetur purus sit amet fermentum. Duis mollis.
-							</div>
-						</div>
-						<!-- END Portlet PORTLET-->
-					</div>
-					<div class="span4 column sortable">
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box red">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="tools">
-									<a href="javascript:;" class="collapse"></a>
-									<a href="#portlet-config" data-toggle="modal" class="config"></a>
-								</div>
-								<div class="actions">
-									<a href="#" class="btn blue mini"><i class="icon-pencil"></i> Edit</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-								Cras mattis consectetur purus sit amet fermentum.Duis mollis.
-							</div>
-						</div>
-						<!-- END Portlet PORTLET-->
-						<!-- BEGIN Portlet PORTLET-->
-						<div class="portlet box green">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="tools">
-									<a href="javascript:;" class="collapse"></a>
-									<a href="#portlet-config" data-toggle="modal" class="config"></a>
-								</div>
-								<div class="actions">
-									<a href="#" class="btn blue mini"><i class="icon-pencil"></i> Edit</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-								Cras mattis consectetur purus sit amet fermentum.Duis mollis.                       
-							</div>
-						</div>
-						<!-- END Portlet PORTLET-->
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box red">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="actions">
-									<a href="#" class="btn yellow mini"><i class="icon-pencil"></i> Edit</a>
-									<a href="#" class="btn green mini"><i class="icon-plus"></i> Add</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-								Cras mattis consectetur purus sit amet fermentum. Duis mollis.
-							</div>
-						</div>
-						<!-- END Portlet PORTLET-->
-					</div>
-					<div class="span4 column sortable">
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box yellow">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="actions">
-									<a href="#" class="btn blue mini"><i class="icon-pencil"></i> Edit</a>
-									<div class="btn-group">
-										<a class="btn mini green" href="#" data-toggle="dropdown">
-										<i class="icon-user"></i> User
-										<i class="icon-angle-down"></i>
-										</a>
-										<ul class="dropdown-menu pull-right">
-											<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-											<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-											<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-											<li class="divider"></li>
-											<li><a href="#"><i class="i"></i> Make admin</a></li>
-										</ul>
+								<div class="portlet-body">
+									<div id="region_statistics_loading">
+										
+									</div>
+									<div id="region_statistics_content">
+										
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+											<!-- <div class="dashboard-stat yellow">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">12,5M$</div>
+														<div class="desc">Total Profit</div>
+													</div>
+													<a class="more" href="#">
+													View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                 
+												</div> -->
+
+												<div id="deploy-map"></div>
+
+											</div>
+											<div class="span6" >
+
+												<h4>Deployment Duration</h4>
+												<div id="defaultCountdown"></div>
+
+												<h4>Energy Consumption</h4>
+												<div id="load_statistics" style="height:108px;"></div>
+
+												<!-- <div class="row-fluid">
+														<div class="span3 responsive" data-tablet="span3 fix-margin" data-desktop="span3">
+															<div class="circle-stat block">
+																<div class="visual">
+																	<input class="knobify" data-width="115" data-fgcolor="#ffb848" data-thickness=".2" data-skin="tron" data-displayprevious="true" value="-12" data-max="100" data-min="-100" />
+																</div>
+																<div class="details">
+																	<div class="title">Downtime <i class="icon-caret-down down"></i></div>
+																	<div class="number">0.01%</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="span3 responsive" data-tablet="span3 fix-margin" data-desktop="span3">
+															<div class="circle-stat block">
+																<div class="visual">
+																	<input class="knobify" data-width="115" data-fgcolor="#ffb848" data-thickness=".2" data-skin="tron" data-displayprevious="true" value="-12" data-max="100" data-min="-100" />
+																</div>
+																<div class="details">
+																	<div class="title">Downtime <i class="icon-caret-down down"></i></div>
+																	<div class="number">0.01%</div>
+																</div>
+															</div>
+														</div>
+													</div> -->
+
+													<!-- <div class="row-fluid">
+														<div class="span4 responsive" data-tablet="span4 fix-margin" data-desktop="span4">
+															<input class="knob" data-angleOffset=-125 data-angleArc=250 data-fgColor="#66EE66" value="35">
+															<input class="knob" data-angleOffset=-125 data-angleArc=250 data-fgColor="#66EE66" value="35">
+														</div>
+														<div class="span6 responsive" data-tablet="span6 fix-margin" data-desktop="span6">
+															<div class="row-fluid">
+																test
+
+															</div>
+														</div>
+													</div> -->
+
+
+												<!-- <div class="row-fluid">
+													<div class="span4">
+														<h4>Disable display input</h4>
+														<input class="knob" data-width="100" data-displayInput=false value="35">
+													</div>
+													<div class="span4">
+														<h4>Disable display input</h4>
+														<input class="knob" data-width="100" data-displayInput=false value="35">
+													</div>
+													<div class="span4">
+														<h4>Disable display input</h4>
+														<input class="knob" data-width="100" data-displayInput=false value="35">
+													</div>
+												</div>
+												<div class="row-fluid">
+													<div class="span4">
+														<h4>Disable display input</h4>
+														<input class="knob" data-width="100" data-displayInput=false value="35">
+													</div>
+													<div class="span4">
+														<h4>Disable display input</h4>
+														<input class="knob" data-width="100" data-displayInput=false value="35">
+													</div>
+													<div class="span4">
+														<h4>Disable display input</h4>
+														<input class="knob" data-width="100" data-displayInput=false value="35">
+													</div>
+												</div> -->
+
+
+
+											</div>
+										</div>
+										
 									</div>
 								</div>
 							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-								Cras mattis consectetur purus sit amet fermentum. Duis mollis.
-							</div>
+							<!-- END PORTLET-->
+
 						</div>
-						<!-- END Portlet PORTLET-->
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box red">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="actions">
-									<a href="#" class="btn blue mini"><i class="icon-pencil"></i> Edit</a>
-									<div class="btn-group">
-										<a class="btn mini green" href="#" data-toggle="dropdown">
-										<i class="icon-user"></i> User
-										<i class="icon-angle-down"></i>
-										</a>
-										<ul class="dropdown-menu pull-right">
-											<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-											<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-											<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-											<li class="divider"></li>
-											<li><a href="#"><i class="i"></i> Make admin</a></li>
-										</ul>
+					</div>
+
+					<div class="row-fluid">
+						<div class="span12">
+							
+							<!-- BEGIN PORTLET-->
+							<div class="portlet">
+								<div class="portlet-title">
+									<div class="caption"><i class="icon-globe"></i>Deployment Status</div>
+									<div class="tools">
+										<a href="" class="collapse"></a>
+										<a href="#portlet-config" data-toggle="modal" class="config"></a>
+										<a href="" class="reload"></a>
+										<a href="" class="remove"></a>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<div id="region_statistics_loading">
+										
+									</div>
+									<div id="region_statistics_content">
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat yellow">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001234</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                 
+												</div>
+											</div>
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat red">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001235</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                
+												</div>
+											</div>
+										</div>
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat yellow">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001236</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                 
+												</div>
+											</div>
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001237</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                 
+												</div>
+											</div>
+										</div>
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001238</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                  
+												</div>
+											</div>
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001239</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                  
+												</div>
+											</div>
+										</div>
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001240</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                  
+												</div>
+											</div>
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001241</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                  
+												</div>
+											</div>
+										</div>
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001242</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                 
+												</div>
+											</div>
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001243</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                  
+												</div>
+											</div>
+										</div>
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001244</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                  
+												</div>
+											</div>
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001245</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>               
+												</div>
+											</div>
+										</div>
+										<div class="row-fluid">
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001246</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                 
+												</div>
+											</div>
+											<div class="span6 responsive" data-tablet="span6" data-desktop="span6">
+												<div class="dashboard-stat grey">
+													<div class="visual">
+														<i class="icon-bar-chart"></i>
+													</div>
+													<div class="details">
+														<div class="number">Exo 001247</div>
+														<div class="desc">72F \ 39% \ 2 Guests</div>
+													</div>
+													<a class="more" data-toggle="modal" href="#responsive">
+														View more <i class="m-icon-swapright m-icon-white"></i>
+													</a>                  
+												</div>
+											</div>
+										</div>																																								
+
 									</div>
 								</div>
 							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentumDuis mollis, est non commodo luctus.
-							</div>
+							<!-- END PORTLET-->
+
 						</div>
-						<!-- END Portlet PORTLET-->
-						<!-- BEGIN Portlet PORTLET-->
-						<div class=" portlet box yellow">
-							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Portlet</div>
-								<div class="actions">
-									<a href="#" class="btn yellow mini"><i class="icon-pencil"></i> Edit</a>
-									<a href="#" class="btn green mini"><i class="icon-plus"></i> Add</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-								Cras mattis consectetur purus sit amet fermentum. Duis mollis.
-							</div>
-						</div>
-						<!-- END Portlet PORTLET-->
 					</div>
-				</div>
+
 				<!-- END PAGE CONTENT-->
 			</div>
 			<!-- END PAGE CONTAINER--> 
@@ -984,7 +821,7 @@
 	<!-- BEGIN FOOTER -->
 	<div class="footer">
 		<div class="footer-inner">
-			2013 &copy; Metronic by keenthemes.
+			2013 &copy; Reaction Populous
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">
@@ -993,6 +830,45 @@
 		</div>
 	</div>
 	<!-- END FOOTER -->
+
+
+								<div id="responsive" class="modal hide fade" tabindex="-1" data-width="760">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+										<h3>Yo Mama</h3>
+									</div>
+<!-- 									<div class="modal-body">
+										<div class="row-fluid">
+											<div class="span6">
+												<h4>Some Input</h4>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+											</div>
+											<div class="span6">
+												<h4>Some More Input</h4>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+												<p><input type="text" class="span12 m-wrap"></p>
+											</div>
+										</div>
+									</div> -->
+									<div class="modal-footer">
+										<button type="button" data-dismiss="modal" class="btn">Close</button>
+										<!-- <button type="button" class="btn blue">Save changes</button> -->
+									</div>
+								</div>
+
+
+
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 	<!-- BEGIN CORE PLUGINS -->
 	<script src="assets/plugins/jquery-1.10.1.min.js" type="text/javascript"></script>
@@ -1009,15 +885,77 @@
 	<script src="assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
 	<script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
 	<!-- END CORE PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL PLUGINS -->   
+	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript" ></script>
+	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript" ></script>
+	<!-- END PAGE LEVEL PLUGINS -->
+
+
+	<script src="assets/plugins/jquery-knob/js/jquery.knob.js"></script>
+
+
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="assets/scripts/app.js"></script>   
+	<script src="assets/scripts/ui-sliders.js"></script>
 	<script src="assets/scripts/portlet-draggable.js"></script> 
+	<script src="assets/scripts/ui-modals.js"></script>     
+
+	<script src="assets/plugins/countdown/jquery.countdown.js" type="text/javascript"></script>
+	<script src="assets/scripts/coming-soon.js" type="text/javascript"></script>  
+
+	<script src="assets/plugins/flot/jquery.flot.js" type="text/javascript"></script>
+	<script src="assets/plugins/flot/jquery.flot.resize.js" type="text/javascript"></script> 
+
+	<!-- <script src="assets/plugins/leaflet/leaflet.js" type="text/javascript"></script> -->
+	<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js" type="text/javascript"></script>
+	<script src="assets/plugins/leaflet/leaflet.markercluster-src.js" type="text/javascript"></script>	
+	<script src="assets/plugins/leaflet/realworld.388.js" type="text/javascript"></script>	
+
+	<script src="assets/scripts/index.js" type="text/javascript"></script> 
 	<!-- END PAGE LEVEL SCRIPTS -->  
 	<script>
 		jQuery(document).ready(function() {       
 		   // initiate layout and plugins
 		   App.init();
-		   PortletDraggable.init();
+		   //PortletDraggable.init();
+
+  		   CoomingSoon.init();
+
+		   UISliders.initSliders();
+		   UISliders.initKnowElements();
+
+
+
+		   Index.initCharts(); // init index page's custom scripts
+
+
+
+			var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
+				cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade, Points &copy 2012 LINZ',
+				cloudmade = L.tileLayer(cloudmadeUrl, {maxZoom: 17}),
+				latlng = L.latLng(-37.82, 175.24);
+
+			var map = L.map('deploy-map', {center: latlng, zoom: 13, layers: [cloudmade], attributionControl: false});
+
+			var markers = L.markerClusterGroup();
+			
+			for (var i = 0; i < addressPoints.length; i++) {
+				var a = addressPoints[i];
+				var title = a[2];
+				var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title });
+				//marker.bindPopup(title);
+
+				marker.on('click', function () {
+				    window.location.href = "/deployment";
+				});
+
+				markers.addLayer(marker);
+			}
+
+			map.addLayer(markers);
+
+
 		});
 	</script>
 	<!-- END JAVASCRIPTS -->

@@ -431,6 +431,7 @@ Header and header elements.
 }
 
 .header .nav > li.dropdown .dropdown-toggle .badge {
+  color: #000;
   position: absolute;
   font-size: 11px !important;
   font-weight: 300;
@@ -438,7 +439,7 @@ Header and header elements.
   right: 24px;
   text-align: center;
   height: 14px;
-  background-color: #e02222;
+  background-color: #ffbd1a;
   padding: 2px 6px 2px 6px;
   -webkit-border-radius: 12px !important;
      -moz-border-radius: 12px !important;
@@ -3082,6 +3083,10 @@ Dashboard stats
 
 .dashboard-stat.purple {
   background-color: #852b99;
+}
+
+.dashboard-stat.grey {
+  background-color: #555555;
 }
 
 .dashboard-stat.purple .more { 

@@ -47,9 +47,9 @@ ul.page-sidebar-menu > li:hover > a {
   background: #303030;
 }
 ul.page-sidebar-menu > li.active > a {
-  background: #e02222 !important;
+  background: #ffbd1a !important;
   border-top-color: transparent !important;
-  color: #ffffff;
+  color: #000 !important;
 }
 ul.page-sidebar-menu > li.active > a i {
   color: #ffffff;
@@ -285,3 +285,6 @@ Landscape phone to portrait tablet
     background: #1e1e1e;
   }
 }
+
+#map { height: 680px; }
+#deploy-map { height: 240px; }
