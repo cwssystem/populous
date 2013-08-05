@@ -53,6 +53,7 @@ io = io.listen(server);
 io.set('log level', 1);
 
 io.sockets.on('connection', function (socket) {
+
   iosocket = socket;
   socket.on('message',function(data){
     var bits = data.split(":");
