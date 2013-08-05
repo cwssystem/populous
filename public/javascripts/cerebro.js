@@ -15,15 +15,9 @@ function exoInit(mutantID, report) {
 
 	console.log("renderData:", mutantID, report);
 
-	var exo = $("#exo-grid").find("[exo-id=00000" + mutantID + "]");
-
-
-	console.log(exo);
-	exo.css('background', 'red');
-
-	exoFire
-	exoHumidity
-	exoTemp	
+	//exoFire
+	//exoHumidity
+	//exoTemp	
 
 }
 
