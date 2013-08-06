@@ -4,36 +4,58 @@ var socket = io.connect("http://localhost:3000");
 socket.on('mutant_report', function (data) {
 
 	if (data.mutantID != undefined) {
+
+		// format exoID from mutantID
+		var exoID = "00000" + data.mutantID;
 		
-		exoInit(data.mutantID,data.report);
+		exoInit(exoID, data.report.split(","));
 		//renderData(data.mutantID,data.report);
 		//renderStatus(data.mutantID);
 	}
 });
 
-function exoInit(mutantID, report) {
+function exoInit(exoID, report) {
 
-	console.log("renderData:", mutantID, report);
+	console.log("renderData:", exoID, report);
 
-	//exoFire
-	//exoHumidity
-	//exoTemp	
+	// light up online Exo
+	$('#' + exoID)
+		.addClass('yellow')
+		.removeClass('grey');
 
-}
+	// detect fire within Exo
+	exoFire(exoID, report[0]);
 
-function exoFire(mutantID, fireData) {
+	// detect humidity within Exo
+	exoHumidity(exoID, report[1]);
 
-}
-
-function exoHumidity(mutantID, humidityData) {
-
-}
-
-function exoTemp(mutantID, tempData) {
+	// detect temperature within Exo
+	exoTemp(exoID, report[2]);	
 
 }
 
+function exoFire(exoID, fireData) {
 
+	// light up red as fire Exo
+	$('#' + exoID)
+		.addClass('red');
+}
+
+function exoHumidity(exoID, humidityData) {
+
+	// update humidity value to Exo
+	$("#" + exoID + " .hum")
+		.html(humidityData);
+
+}
+
+function exoTemp(exoID, tempData) {
+
+	// update temp value to Exo
+	$("#" + exoID + " .temp")
+		.html(tempData);
+
+}
 
 // var roster = {};
 // var mutantIDs = {};
