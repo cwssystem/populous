@@ -8,7 +8,7 @@ socket.on('mutant_report', function (data) {
 		// format exoID from mutantID
 		var exoID = "00000" + data.mutantID;
 		
-		exoInit(exoID, data.report.split(","));
+		exoInit(exoID, data.report);
 		//renderData(data.mutantID,data.report);
 		//renderStatus(data.mutantID);
 	}
@@ -16,7 +16,7 @@ socket.on('mutant_report', function (data) {
 
 function exoInit(exoID, report) {
 
-	console.log("renderData:", exoID, report);
+	// console.log("renderData:", exoID, report);
 
 	// light up online Exo
 	$('#' + exoID)
@@ -24,179 +24,47 @@ function exoInit(exoID, report) {
 		.removeClass('grey');
 
 	// detect fire within Exo
-	exoFire(exoID, report[0]);
+	exoFire(exoID, report[2]);
 
 	// detect humidity within Exo
-	exoHumidity(exoID, report[1]);
+	exoHumidity(exoID, report[3]);
 
 	// detect temperature within Exo
-	exoTemp(exoID, report[2]);	
+	exoTemp(exoID, report[4]);	
 
 }
 
 function exoFire(exoID, fireData) {
 
 	// light up red as fire Exo
-	$('#' + exoID)
-		.addClass('red');
+	reading = parseInt(fireData.substr(1));
+	if (reading < 350) {
+		$('#' + exoID)
+			.removeClass('yellow')
+			.addClass('red');
+	} else {
+		$('#' + exoID)
+			.addClass('yellow')
+			.removeClass('red');
+	}
 }
 
 function exoHumidity(exoID, humidityData) {
 
 	// update humidity value to Exo
+	str = humidityData.substr(1);
+	str = str.split(".")[0] + "%";
 	$("#" + exoID + " .hum")
-		.html(humidityData);
+		.html(str);
 
 }
 
 function exoTemp(exoID, tempData) {
 
 	// update temp value to Exo
+	temp = parseInt(tempData.substr(1));
+	str = "" + (32 + (9/5 * temp)) + "&deg;F";
 	$("#" + exoID + " .temp")
-		.html(tempData);
+		.html(str);
 
 }
-
-// var roster = {};
-// var mutantIDs = {};
-// mutantIDs["mutant1"] = "GAMBIT";
-// mutantIDs["GAMBIT"] = "1";
-// mutantIDs["mutant2"] = "BANSHEE";
-// mutantIDs["BANSHEE"] = "2";
-// mutantIDs["mutant3"] = "CYCLOPS";
-// mutantIDs["CYCLOPS"] = "3";
-
-// var buttonMap = [	"gLEDg","gLEDr","bLEDg","bLEDr","cLEDg","cLEDr",
-// 					"allBlue","allBlue","allBlue","allBlue","allBlue","allBlue"
-// 				];
-// var colWidth = 6;
-// var focusedIndex = 0;
-
-// function syncFocus() {
-// 	$("*").removeClass("focused");
-// 	$("#"+buttonMap[focusedIndex]).addClass("focused");
-// }
-
-// syncFocus();
-
-// $(document).keydown(function(event) {
-// 	event.preventDefault();
-// 	switch (event.which) {
-// 		case 13 :
-// 			//SELECT
-// 			$("#"+buttonMap[focusedIndex]).click();
-// 			break;
-// 		case 38 :
-// 			//UP
-// 			focusedIndex = focusedIndex - colWidth;
-// 			break;
-// 		case 40 :
-// 			//DOWN
-// 			focusedIndex = focusedIndex + colWidth;
-// 			break;
-// 		case 37 :
-// 			//LEFT
-// 			focusedIndex--;
-// 			break;
-// 		case 39 :
-// 			//RIGHT
-// 			focusedIndex++;
-// 			break;
-// 		case 27 :
-// 			//MENU
-// 			break;
-// 		default :
-// 			break;
-// 	}
-// 	if (focusedIndex < 0) {
-// 		focusedIndex = 11;
-// 	} else {
-// 		if (focusedIndex > 11) focusedIndex = 0;
-// 	}
-
-// 	syncFocus();
-// 	console.log(event.which);
-// });
-
-// function lightLED(mutantID,LED) {
-// 	console.log(mutantID,LED);
-// 	socket.send("cmd:"+mutantID+"|LED"+LED);
-// 	switch (LED) {
-// 		case "R" : 
-// 			$("#"+mutantIDs["mutant"+mutantID].toLowerCase()+" .greenLED").attr("src","images/LEDGreenOFF.png");
-// 			$("#"+mutantIDs["mutant"+mutantID].toLowerCase()+" .redLED").attr("src","images/LEDRedON.png");
-// 			break;
-// 		case "G" : 
-// 			$("#"+mutantIDs["mutant"+mutantID].toLowerCase()+" .greenLED").attr("src","images/LEDGreenON.png");
-// 			$("#"+mutantIDs["mutant"+mutantID].toLowerCase()+" .redLED").attr("src","images/LEDRedOFF.png");
-// 			break;
-// 		case "B" :
-// 			$("#"+mutantIDs["mutant"+mutantID].toLowerCase()+" .greenLED").attr("src","images/LEDGreenOFF.png");
-// 			$("#"+mutantIDs["mutant"+mutantID].toLowerCase()+" .redLED").attr("src","images/LEDRedOFF.png");
-// 			break;
-// 	}
-// }
-
-// function renderStatus(mutantID) {
-// 	console.log("renderStatus:",mutantID);
-// 	mutantCallsign = mutantIDs["mutant" + mutantID];
-// 	if (mutantCallsign) {
-// 		roster[mutantCallsign] = new Date().getTime();
-// 	}
-// 	for (var mutant in roster) {
-// 		var lastSeen = roster[mutant];
-// 		var now = new Date().getTime();
-// 		//console.log("Elapsed time since last report:",now - lastSeen,lastSeen,mutant);
-// 		if (now - lastSeen > 10000) {
-// 			$('#'+mutant.toLowerCase()).removeClass("present").addClass("awol");
-// 			$('#'+mutant.toLowerCase()+' .proximity').html('---');
-// 		} else {
-// 			$("#" + mutant.toLowerCase()).addClass("present").removeClass("awol");
-// 		}
-// 	}
-// }
-
-// function renderData(mutantID, report) {
-// 	console.log("renderData:",mutantID,report);
-// 	var search = "" + "mutant" + mutantID;
-// 	mutantCallsign = mutantIDs[search];
-// 	//report = report.substring(1);
-// 	if (mutantCallsign) {
-// 		output = "";
-// 		for (var i = 2;i < report.length; i++) {
-// 			r = report[i];
-// 			type = r.substring(0,1);
-// 			value = r.substring(1);
-// 			if (type == "P" && parseInt(value) > 300) {
-// 				output = output + "P: out of range ";
-// 			} else {
-// 				output = output + type + ": " + value + " ";
-// 			}
-// 		}
-// 		$('#'+mutantCallsign.toLowerCase()+' .proximity').html(output);
-// 	}
-// }
-
-// function ledBlue(mutant) {
-// 	// lightLED(mutantIDs[mutant],"B");
-// 	LED = "B";
-// 	lightLED(mutantIDs[mutant],LED);
-// }
-
-// $('.LEDButtons img').click(function(){
-// 	var mutantName = $(this).parent().parent().attr("id");
-// 	var LED = ($(this).hasClass("greenLED")) ? "G" : "R";
-// 	lightLED(mutantIDs[mutantName.toUpperCase()],LED);
-// });
-// $('#allBlue').click(function(){
-// 	// lightLED("*","B");
-// 	for (var mutant in roster) {
-// 		(function (mutant) {
-// 			setTimeout(function(){ledBlue(mutant)}, mutantIDs[mutant]*200);
-// 		})(mutant);
-// 	}
-// });
-
-// setInterval(function(){
-// 	renderStatus();
-// },250);
