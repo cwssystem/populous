@@ -20,6 +20,8 @@ green: #35aa47
 purple: #852b99
 grey: #555555;
 light grey: #fafafa;
+
+Reaction orange yellow: #fa973f;
 ***/
 
 /*********************
@@ -1374,7 +1376,7 @@ Portlets
 }
 
 .portlet-body.yellow, .portlet.yellow {
-  background-color: #ffb848 !important;
+  background-color: #fa973f !important;
 }
 
 .portlet-body.green, .portlet.green {
