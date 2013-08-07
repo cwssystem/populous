@@ -1,6 +1,8 @@
 
 var socket = io.connect("http://localhost:3000");
 
+$('.desc').addClass('hide');
+
 socket.on('mutant_report', function (data) {
 
 	if (data.mutantID != undefined) {
@@ -22,6 +24,10 @@ function exoInit(exoID, report) {
 	$('#' + exoID)
 		.addClass('yellow')
 		.removeClass('grey');
+	$('#' + exoID + " .desc")
+		.removeClass('hide');
+	$('#' + exoID + " .inactive")
+		.addClass('hide');
 
 	// detect fire within Exo
 	exoFire(exoID, report[2]);

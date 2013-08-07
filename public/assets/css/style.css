@@ -3089,9 +3089,19 @@ Dashboard stats
   background-color: #555555;
 }
 
+.dashboard-stat.grey > * {
+  opacity: .3;
+}
+
 .dashboard-stat.purple .more { 
   background-color: #6e1881;
 } 
+
+.dashboard-stat .inactive {
+  text-align: right;
+  color: #fff;
+  font-size: 18px;
+}
 
 /***
 Circle Stats(KNOB, new in v1.1.1)
